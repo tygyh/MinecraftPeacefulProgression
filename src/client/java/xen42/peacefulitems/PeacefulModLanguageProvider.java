@@ -252,4 +252,72 @@ public abstract class PeacefulModLanguageProvider extends FabricLanguageProvider
 			translationBuilder.addTags("硫磺矿石", PeacefulModTags.ItemTags.SULPHUR_ORES, PeacefulModTags.ItemTags.SULPHUR_ORES_C, PeacefulModTags.ItemTags.SULFUR_ORES, PeacefulModTags.BlockTags.SULPHUR_ORES, PeacefulModTags.BlockTags.SULPHUR_ORES_C, PeacefulModTags.BlockTags.SULFUR_ORES);
 		}
 	}
+	
+	public static class Russian extends PeacefulModLanguageProvider {
+
+		public Russian(FabricDataOutput output, String languageCode, CompletableFuture<WrapperLookup> registryLookup) {
+			super(output, languageCode, registryLookup);
+		}
+
+		public Russian(FabricDataOutput output, CompletableFuture<WrapperLookup> registryLookup) {
+			this(output, "ru_ru", registryLookup);
+		}
+
+		@Override
+		public void generate(WrapperLookup registryLookup, ModTranslationBuilder translationBuilder) {
+			translationBuilder.add(PeacefulModItems.BAT_WING, "Крыло летучей мыши");
+			translationBuilder.add(PeacefulModItems.GUANO, "Гуано");
+			translationBuilder.add(PeacefulModItems.ECTOPLASM, "Эктоплазма");
+			translationBuilder.add(PeacefulModItems.SULPHUR, "Сера");
+			translationBuilder.add(PeacefulModItems.FLAX, "Семена льна");
+			
+			translationBuilder.add(PeacefulModBlocks.SULPHUR_BLOCK, "Серный блок");
+			translationBuilder.add(PeacefulModBlocks.SULPHUR_STAIRS, "Серные ступеньки");
+			translationBuilder.add(PeacefulModBlocks.SULPHUR_SLAB, "Серная плита");
+			translationBuilder.add(PeacefulModBlocks.SULPHUR_WALL, "Серная ограда");
+			translationBuilder.add(PeacefulModBlocks.CHISELED_SULPHUR_BLOCK, "Резной серный блок");
+			translationBuilder.add(PeacefulModBlocks.SULPHUR_ORE, "Серная руда");
+			translationBuilder.add(PeacefulModBlocks.FOSSIL_ORE, "Окаменелость");
+			translationBuilder.add(PeacefulModBlocks.DEEPSLATE_FOSSIL_ORE, "Глубинносланцевая окаменелость");
+			translationBuilder.add(PeacefulModBlocks.SOUL_SOIL_FOSSIL_ORE, "Незерская окаменелость");
+			translationBuilder.add(PeacefulModBlocks.EFFIGY_ALTAR, "Алтарь тотемов");
+			translationBuilder.add(PeacefulModItems.CLAM, "Моллюск");
+			translationBuilder.add(PeacefulModItems.COOKED_CLAM, "Жареный моллюск");
+			
+			translationBuilder.add(PeacefulModBlocks.BLAZE_PICKLE, "Полыхающий коралл");
+			translationBuilder.add(PeacefulModBlocks.BREEZE_CORAL, "Ветренный коралл");
+			translationBuilder.add(PeacefulModItems.GHASTLING_SPAWN_EGG, "Яйцо призыва души");
+			translationBuilder.add(PeacefulModItems.END_CLAM_SPAWN_EGG, "Яйцо призыва эндер-моллюска");
+
+			translationBuilder.addVillagerProfession(PeacefulModVillagers.DJ_VILLAGER_KEY, "Музыкант");
+			translationBuilder.add(PeacefulMod.GHASTLING_ENTITY, "Душа");
+			translationBuilder.add(PeacefulMod.END_CLAM_ENTITY, "Эндер-моллюск");
+
+			translationBuilder.add(PeacefulModItems.CAPE, "Плащ");
+			translationBuilder.add(PeacefulModItems.WITHER_EFFIGY, "Тотем визера");
+			translationBuilder.add(PeacefulModItems.DRAGON_EFFIGY, "Тотем Эндер-дракона");
+			translationBuilder.add(PeacefulModItems.GUARDIAN_EFFIGY, "Тотем древнего стража");
+			translationBuilder.add(PeacefulModItems.RAID_EFFIGY, "Тотем рейда");
+			
+			translationBuilder.add(PeacefulModFluids.DRAGON_BREATH, "Дыхание дракона");
+			translationBuilder.add(PeacefulModBlocks.DRAGON_BREATH_CAULDRON, "Котёл с дыханием дракона");
+			
+			translationBuilder.addFilledMap(PeacefulModTags.StructureTags.EFFIGY_ALTAR_DUNGEON, "Карта искателя алтарей");
+			translationBuilder.addFilledMap(PeacefulModTags.StructureTags.TRAIL_RUINS, "Карта исследователя руины троп");
+			translationBuilder.addFilledMap(StructureTags.OCEAN_RUIN, "Карта исследователя подводных руин");
+			
+			translationBuilder.add(PeacefulMod.ENABLE_STARVING_PEACEFUL, "Включить голодание на мирной сложности");
+			translationBuilder.add(PeacefulMod.ENABLE_SUPER_HEALING_PEACEFUL, "Включить быстрое восстановление здоровья на мирной сложности");
+			translationBuilder.add(PeacefulMod.ENABLE_ENDER_DRAGON_FIGHT_PEACEFUL, "Включить битву с драконом на мирной сложности");
+
+			translationBuilder.add(PeacefulModTags.ItemTags.EFFIGIES, "Тотемы");
+			translationBuilder.add(PeacefulModTags.StructureTags.EFFIGY_ALTAR_DUNGEON, "Алтари тотемов");
+			translationBuilder.add(PeacefulModTags.StructureTags.TRAIL_RUINS, "Руины троп");
+			translationBuilder.add(StructureTags.OCEAN_RUIN, "Подводные руины");
+			translationBuilder.addTags("Рудоносная почва душ", PeacefulModTags.ItemTags.ORE_BEARING_GROUND_SOUL_SOIL, PeacefulModTags.BlockTags.ORE_BEARING_GROUND_SOUL_SOIL);
+			translationBuilder.addTags("Руды почвы душ в земле", PeacefulModTags.ItemTags.ORES_IN_GROUND_SOUL_SOIL, PeacefulModTags.BlockTags.ORES_IN_GROUND_SOUL_SOIL);
+			translationBuilder.addTags("Окаменелости", PeacefulModTags.ItemTags.FOSSIL_ORES, PeacefulModTags.ItemTags.FOSSIL_ORES_C, PeacefulModTags.BlockTags.FOSSIL_ORES, PeacefulModTags.BlockTags.FOSSIL_ORES_C);
+			translationBuilder.addTags("Серные руды", PeacefulModTags.ItemTags.SULPHUR_ORES, PeacefulModTags.ItemTags.SULPHUR_ORES_C, PeacefulModTags.ItemTags.SULFUR_ORES, PeacefulModTags.BlockTags.SULPHUR_ORES, PeacefulModTags.BlockTags.SULPHUR_ORES_C, PeacefulModTags.BlockTags.SULFUR_ORES);
+		}
+	}
 }
