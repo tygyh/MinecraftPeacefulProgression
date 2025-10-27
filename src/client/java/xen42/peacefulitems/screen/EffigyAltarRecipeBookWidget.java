@@ -37,10 +37,10 @@ public class EffigyAltarRecipeBookWidget extends RecipeBookWidget<EffigyAltarScr
 		super(screenHandler, TABS);
 	}
 
-	@Override
-	protected boolean isValid(Slot slot) {
-		return this.craftingScreenHandler.getOutputSlot() == slot || this.craftingScreenHandler.getInputSlots().contains(slot) || this.craftingScreenHandler.getBrimstoneSlot() == slot;
-	}
+    @Override
+    protected boolean isCraftingSlot(Slot slot) {
+        return this.craftingScreenHandler.getOutputSlot() == slot || this.craftingScreenHandler.getInputSlots().contains(slot) || this.craftingScreenHandler.getBrimstoneSlot() == slot;
+    }
 
 	private boolean canDisplay(RecipeDisplay display) {
 		return true;
@@ -87,7 +87,7 @@ public class EffigyAltarRecipeBookWidget extends RecipeBookWidget<EffigyAltarScr
 		this.toggleCraftableButton.setTextures(TEXTURES);
 	}
 
-	@Override
+    @Override
 	protected Text getToggleCraftableButtonText() {
 		return TOGGLE_CRAFTABLE_TEXT;
 	}

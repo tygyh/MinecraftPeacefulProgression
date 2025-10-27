@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.10-SNAPSHOT'
+	id 'fabric-loom' version '1.11-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -64,9 +64,13 @@ dependencies {
 	}
 
 	// REI (RoughlyEnoughItems)
-	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
-	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
-	modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${rei_version}"
+	modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+	// modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
+	modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${rei_version}"){
+        exclude(group: "net.fabricmc.fabric-api")
+    }
 	
 }
 
