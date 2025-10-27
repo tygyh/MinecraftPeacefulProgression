@@ -30,7 +30,11 @@
 		],
 		"rei_common": [
 			"xen42.peacefulitems.rei.EffigyAltarServerPlugin"
-		]
+		],
+        "eiv": [
+          "xen42.peacefulitems.eiv.PeacefulProgressionClientEIVPlugin",
+          "xen42.peacefulitems.eiv.PeacefulProgressionServerEIVPlugin"
+        ]
 	},
 	"mixins": [
 		"peaceful-items.mixins.json",
@@ -42,7 +46,7 @@
 	"accessWidener": "peaceful-items.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.21.9",
+		"minecraft": "~1.21.10",
 		"java": ">=21",
 		"fabric-api": "*"
 	},

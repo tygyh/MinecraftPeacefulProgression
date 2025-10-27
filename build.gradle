@@ -27,6 +27,17 @@ repositories {
 		name = 'Roughly Enough Items'
 		url = "https://maven.shedaniel.me"
 	}
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 loom {
@@ -71,7 +82,11 @@ dependencies {
 	modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${rei_version}"){
         exclude(group: "net.fabricmc.fabric-api")
     }
-	
+
+    // EIV (Extended Item View)
+    modCompileOnly("maven.modrinth:eiv:${eiv_version}-fabric")
+    modLocalRuntime("maven.modrinth:eiv:${eiv_version}-fabric")
+
 }
 
 processResources {
