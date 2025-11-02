@@ -1,5 +1,6 @@
 package xen42.peacefulitems.screen;
 
+import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.ScreenPos;
 import net.minecraft.client.gui.screen.ingame.RecipeBookScreen;
@@ -22,7 +23,7 @@ public class EffigyAltarHandledScreen extends RecipeBookScreen<EffigyAltarScreen
     protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
         int i = this.x;
         int j = (this.height - this.backgroundHeight) / 2;
-        context.drawTexture(RenderLayer::getGuiTextured, TEXTURE, i, j, 0.0F, 0.0F, 
+        context.drawTexture(RenderPipelines.GUI_TEXTURED, TEXTURE, i, j, 0.0F, 0.0F,
             this.backgroundWidth, this.backgroundHeight, 256, 256);
         
         if (handler.hasOutput() || recipeBookWidget.isShowingGhostRecipes()) {
