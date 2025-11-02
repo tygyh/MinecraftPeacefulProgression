@@ -7,9 +7,6 @@ name: Create Release
 on:
   # Manual trigger
   workflow_dispatch:
-  # Trigger the workflow on pushes to only the 'main' branch
-  push:
-    branches: [ main ]
 
 permissions:
   contents: write
